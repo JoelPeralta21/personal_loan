@@ -29,6 +29,7 @@ data "aws_iam_policy_document" "lambda_policy" {
   }
 }
 
+
 resource "aws_iam_role" "lambda_role" {
   name               = "lambda_execution_role"
   assume_role_policy = data.aws_iam_policy_document.lambda_policy.json
